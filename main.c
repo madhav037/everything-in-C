@@ -5,7 +5,8 @@
 
 int main(void) {
     const int n = 5;
-    int* arr = s_malloc(n * sizeof(int));
+    printf("%lu\n", sizeof(int));
+    int* arr = s_malloc(36770 * sizeof(int));
     if (!arr) {
         printf("Initial allocation failed!\n");
         return 1;
@@ -39,5 +40,6 @@ int main(void) {
     s_free(arr_0);
 
     check_memory_leaks();
+    print_memory_blocks();
     return 0;
 }
